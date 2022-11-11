@@ -1,0 +1,127 @@
+Student Rest API's details
+
+Add Student: http://localhost:8081/students/add
+
+Method : POST
+
+Sample Request Json : 
+{
+    "RollNo":4,
+    "studentName":"Priya",
+    "courses": [
+        "Java",
+    "MongoDB",
+    "PHP",
+    "Java"
+  ]
+}
+
+Sample Response Json : 201 Created
+Student Data Added
+StudentsDB(id=4, studentName=Priya, courses=[Java, MongoDB, PHP, Java])
+
+--------------------------------------------------------------------------------------
+
+Find All Students: http://localhost:8081/students/findAll
+
+Method : GET
+
+Sample Response Json : 302 Found
+[
+    {
+        "studentName": "Neelam",
+        "courses": [
+            "MongoDB",
+            "PHP"
+        ],
+        "RollNo": 0
+    },
+    {
+        "studentName": "Pratiksha",
+        "courses": [
+            "MongoDB",
+            "PHP"
+        ],
+        "RollNo": 1
+    },
+    {
+        "studentName": "Kajal",
+        "courses": [
+            "MongoDB",
+            "PHP",
+            "Java"
+        ],
+        "RollNo": 2
+    }
+]
+
+
+--------------------------------------------------------------------------------------
+
+Find Student By ID (RollNo): http://localhost:8081/students/1
+
+Method : GET
+
+Sample Response Json : 302 Found
+{
+    "studentName": "Pratiksha",
+    "courses": [
+        "MongoDB",
+        "PHP"
+    ],
+    "RollNo": 1
+}
+
+
+--------------------------------------------------------------------------------------
+
+Find Student By Name: http://localhost:8081/students/studentName/Pratiksha
+
+Method: GET
+
+Sample Response Json : 302 Found
+
+{
+    "studentName": "Pratiksha",
+    "courses": [
+        "MongoDB",
+        "PHP"
+    ],
+    "RollNo": 1
+}
+
+
+--------------------------------------------------------------------------------------
+
+Put (update) Student by student name: http://localhost:8081/students/update/Neelam
+
+Method : PUT
+
+Updating courses
+Sample Request Json : 
+{
+    "RollNo":0,
+    "studentName":"Neelam",
+    "courses": [
+    "PHP",
+    "Java"
+  ]
+}
+
+Sample Response Json : 200 OK
+Student data updated: StudentsDB(id=0, studentName=Neelam, courses=[PHP, Java])
+
+--------------------------------------------------------------------------------------
+
+Delete Student by Id: http://localhost:8081/students/delete/4
+
+Method : Delete
+
+Sample Response Json : 200 OK
+No student with id: 4
+
+Delete Student by Id: http://localhost:8081/students/delete/0
+
+Method : Delete
+Sample Response Json : 200 OK
+Student data deleted with id: 0
