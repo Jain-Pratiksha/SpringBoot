@@ -22,6 +22,7 @@ This project uses **Springdoc OpenAPI 2.x** to generate interactive Swagger UI f
 
 Update your SecurityConfig.java to allow public access to Swagger endpoints (this is only needed if you have autorization setup for urls):
 
+```java
 @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(AbstractHttpConfigurer::disable) // Disable CSRF for simplicity
@@ -38,11 +39,12 @@ Update your SecurityConfig.java to allow public access to Swagger endpoints (thi
 
         return http.build();
     }
+```
 
 3. Add OpenAPI Info (Optional but Recommended)
 
 Add this to your @SpringBootApplication class or a separate config class:
-
+```java
 import io.swagger.v3.oas.annotations.*;
 import io.swagger.v3.oas.annotations.info.*;
 import org.springframework.boot.SpringApplication;
@@ -51,24 +53,22 @@ import org.springframework.security.config.annotation.web.configuration.*;
 
 @SpringBootApplication
 @EnableWebSecurity
-**@OpenAPIDefinition(
-		info = @Info(
-				title = "Show Watchlist APIs",
-				version = "1.0",
-				description = "API for managing a shows watchlist",
-				contact = @Contact(
-						name = "Show Watchlist Team : Pratiksha"
-				)
-		)
-)**
+@OpenAPIDefinition(
+	info = @Info(
+			title = "Show Watchlist APIs",
+			version = "1.0",
+			description = "API for managing a shows watchlist",
+			contact = @Contact(
+					name = "Show Watchlist Team : Pratiksha"
+			)
+	)
+)
 public class ShowWatchlistApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(ShowWatchlistApplication.class, args);
 	}
-
 }
-
+```
 
 4. Run and Access Swagger UI
 
