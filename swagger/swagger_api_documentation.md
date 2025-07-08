@@ -51,7 +51,7 @@ import org.springframework.security.config.annotation.web.configuration.*;
 
 @SpringBootApplication
 @EnableWebSecurity
-@OpenAPIDefinition(
+**@OpenAPIDefinition(
 		info = @Info(
 				title = "Show Watchlist APIs",
 				version = "1.0",
@@ -60,7 +60,7 @@ import org.springframework.security.config.annotation.web.configuration.*;
 						name = "Show Watchlist Team : Pratiksha"
 				)
 		)
-)
+)**
 public class ShowWatchlistApplication {
 
 	public static void main(String[] args) {
