@@ -83,3 +83,9 @@ OR: http://localhost:8080/swagger-ui/index.html
 OpenAPI JSON: http://localhost:8080/v3/api-docs
 
 Wohoo, you are all done in just 4 simple steps.
+
+<img width="944" alt="image" src="https://github.com/user-attachments/assets/7a321468-54af-48da-8efc-bd18e4adbc69" />
+
+
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/5224f355-4cdb-472c-be0f-bb6a2d90a084" />
+
