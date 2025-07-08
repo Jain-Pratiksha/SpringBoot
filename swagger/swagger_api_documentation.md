@@ -20,7 +20,7 @@ This project uses **Springdoc OpenAPI 2.x** to generate interactive Swagger UI f
 
 2. Permit (Allow) Swagger URLs in SecurityConfig
 
-Update your SecurityConfig.java to allow public access to Swagger endpoints (this is only needed if you have autorization setup for urls):
+Update your SecurityConfig.java to allow public access to Swagger endpoints (this is only needed if you have authorization setup for urls):
 
 ```java
 @Bean
