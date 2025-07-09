@@ -111,3 +111,5 @@ You now have a complete logging solution where:
 - Older logs are retained for 30 days or until disk limit (1GB) is hit
 
 - Console and file both receive logs in clean, readable format
+
+<img width="888" alt="image" src="https://github.com/user-attachments/assets/ff5b0fe5-9388-41b6-ae04-1d703e1a6852" />
