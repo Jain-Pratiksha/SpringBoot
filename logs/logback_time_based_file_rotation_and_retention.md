@@ -35,13 +35,12 @@ Create the file at this location:
         <!-- A new file is created here; older ones are rotated using the policy below -->
         <file>logs/shows_watchlist.log</file>
         <!-- Rotation policy for log file (size-time-based rotation) -->
-        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- Pattern for rotated log file names -->
-            <!-- %d{yyyy-MM-dd} means the date will be inserted into the filename, %i is in incremental for same day files -->
+            <!-- %d{yyyy-MM-dd} means the date will be inserted into the filename -->
             <fileNamePattern>
-                logs/shows_watchlist-%d{yyyy-MM-dd}.%i.log
+                logs/shows_watchlist-%d{yyyy-MM-dd}.log
             </fileNamePattern>
-            <maxFileSize>10MB</maxFileSize> <!-- Each log file will be rotated when it reaches 10MB -->
             <maxHistory>30</maxHistory> <!-- Retain logs for 30 days -->
             <totalSizeCap>1GB</totalSizeCap> <!-- Optional: total disk space used by all log files should not exceed 1GB -->
         </rollingPolicy>
