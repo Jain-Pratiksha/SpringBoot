@@ -98,5 +98,3 @@ Log files will be generated automatically under the logs/ folder.
 Wohooo, we are done. Now we have a logic in application to have our logs written onto a file, a new file is created every day, the old logs are renamed on date-time basis.
 Files are deleted automatically on day 30 or if the logs cross size 1 gb the old logs are deleted.
 
-<img width="888" alt="image" src="https://github.com/user-attachments/assets/ff5b0fe5-9388-41b6-ae04-1d703e1a6852" />
-
