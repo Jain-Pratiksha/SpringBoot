@@ -30,7 +30,7 @@ Create the file at this location:
 <configuration>
     <!-- Rolling File Appender -->
     <!-- This appender writes logs to a file and automatically rotates the file daily -->
-    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <!-- Logging path-->
         <!-- Path and filename of the current log file -->
         <!-- A new file is created here; older ones are rotated using the policy below -->
@@ -40,7 +40,7 @@ Create the file at this location:
             <!-- Pattern for rotated log file names -->
             <!-- %d{yyyy-MM-dd} means the date will be inserted into the filename, %i is in incremental for same day files -->
             <fileNamePattern>
-                logs/shows_watchlist-%d{yyyy-mm-dd}.%i.log
+                logs/shows_watchlist-%d{yyyy-MM-dd}.%i.log
             </fileNamePattern>
             <maxFileSize>10MB</maxFileSize> <!-- Each log file will be rotated when it reaches 10MB -->
             <maxHistory>30</maxHistory> <!-- Retain logs for 30 days -->
