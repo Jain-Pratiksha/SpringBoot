@@ -29,18 +29,19 @@ Create the file at this location:
 <configuration>
     <!-- Rolling File Appender -->
     <!-- This appender writes logs to a file and automatically rotates the file daily -->
-    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <!-- Logging path-->
         <!-- Path and filename of the current log file -->
         <!-- A new file is created here; older ones are rotated using the policy below -->
         <file>logs/shows_watchlist.log</file>
-        <!-- Rotation policy for log file (time-based, rotates daily) -->
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+        <!-- Rotation policy for log file (size-time-based rotation) -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
             <!-- Pattern for rotated log file names -->
-            <!-- %d{yyyy-MM-dd} means the date will be inserted into the filename -->
+            <!-- %d{yyyy-MM-dd} means the date will be inserted into the filename, %i is in incremental for same day files -->
             <fileNamePattern>
-                logs/shows_watchlist-%d{yyyy-mm-dd}.log
+                logs/shows_watchlist-%d{yyyy-MM-dd}.%i.log
             </fileNamePattern>
+            <maxFileSize>10MB</maxFileSize> <!-- Each log file will be rotated when it reaches 10MB -->
             <maxHistory>30</maxHistory> <!-- Retain logs for 30 days -->
             <totalSizeCap>1GB</totalSizeCap> <!-- Optional: total disk space used by all log files should not exceed 1GB -->
         </rollingPolicy>
@@ -97,3 +98,6 @@ Log files will be generated automatically under the logs/ folder.
 
 Wohooo, we are done. Now we have a logic in application to have our logs written onto a file, a new file is created every day, the old logs are renamed on date-time basis.
 Files are deleted automatically on day 30 or if the logs cross size 1 gb the old logs are deleted.
+
+<img width="888" alt="image" src="https://github.com/user-attachments/assets/ff5b0fe5-9388-41b6-ae04-1d703e1a6852" />
+
