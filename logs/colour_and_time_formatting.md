@@ -47,3 +47,7 @@ This guide includes short, direct explanations and configs for setting up **colo
 ❌ Do not use in **file logs** (files should remain plain text)
 
 ---
+
+<img width="897" alt="image" src="https://github.com/user-attachments/assets/aaccd1eb-bf2b-4287-8a9f-2605a7e3b5a7" />
+
+
