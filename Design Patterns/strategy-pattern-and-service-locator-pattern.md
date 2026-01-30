@@ -171,3 +171,6 @@ Output: **Sending EMAIL: Keep Learning and Growing**
 ### 🔥One-liner
 > **Strategy chooses the algorithm.  
 > Service Locator finds the implementation.**
+
+Links to example repos:
+https://github.com/Jain-Pratiksha/springboot-notification/tree/notification-strategy-pattern
