@@ -25,6 +25,12 @@ A backend system must:
 - Avoid large `if-else` blocks
 ---
 
+Links to example repos:
+
+Notification with Strategy Pattern : https://github.com/Jain-Pratiksha/springboot-notification/tree/notification-strategy-pattern
+
+Notification with Factory, Strategy, Service Locator Pattern : https://github.com/Jain-Pratiksha/springboot-notification/tree/notification-factory-strategy-service-pattern
+
 ## 🧠 Strategy Pattern — Choosing *HOW* to Pay
 
 Strategy Pattern lets you define multiple ways to do one task and switch between them at runtime. It allows you to switch business logic at runtime without changing the main code.
@@ -171,6 +177,3 @@ Output: **Sending EMAIL: Keep Learning and Growing**
 ### 🔥One-liner
 > **Strategy chooses the algorithm.  
 > Service Locator finds the implementation.**
-
-Links to example repos:
-https://github.com/Jain-Pratiksha/springboot-notification/tree/notification-strategy-pattern
